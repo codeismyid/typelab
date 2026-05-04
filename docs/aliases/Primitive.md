@@ -1,0 +1,16 @@
+[typelab](../README.md) / [aliases](../aliases.md) / Primitive
+
+```ts
+type Primitive = boolean | string | number | bigint | symbol | null | undefined;
+```
+
+Type that represents any primitive value.
+
+This includes `boolean`, `string`, `number`, `bigint`, `symbol`, `null`, and `undefined`.
+
+## Example
+
+```ts
+const value1: Primitive = ""; // valid
+const value2: Primitive = {}; // invalid
+```

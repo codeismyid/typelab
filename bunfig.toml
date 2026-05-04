@@ -1,0 +1,12 @@
+[install]
+exact = true
+saveTextLockfile = false
+
+[run]
+silent = true
+
+[test]
+root = "./__tests__"
+preload = ["./__tests__/preload.ts"]
+coverageSkipTestFiles = true
+coverageThreshold = { lines = 1, functions = 1 }

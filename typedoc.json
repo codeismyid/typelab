@@ -1,0 +1,112 @@
+{
+  "$schema": "https://typedoc-plugin-markdown.org/schema.json",
+  "plugin": ["typedoc-plugin-markdown"],
+
+  // input
+  "entryPoints": ["./lib/**/index.ts"],
+  "exclude": ["**/__internal/*.ts", "./lib/index.ts"],
+  "entryPointStrategy": "resolve",
+  "useTsLinkResolution": true,
+  "externalSymbolLinkMappings": {
+    "typescript": {
+      "*": "#"
+    }
+  },
+
+  // output
+  "out": "./docs",
+  "router": "structure",
+  "alwaysCreateEntryPointModule": false,
+  "flattenOutputFiles": false,
+  "useCodeBlocks": true,
+  "expandObjects": true,
+  "preserveAnchorCasing": true,
+  "hidePageHeader": true,
+  "hidePageTitle": true,
+  "hideGroupHeadings": true,
+  "hideBreadcrumbs": false,
+  "readme": "none",
+
+  // output > exclude
+  "excludeInternal": true,
+  "excludeNotDocumented": true,
+  "excludeReferences": true,
+  "intentionallyNotExported": [
+    "_IsTrue",
+    "_IsTrueAndNotNever",
+    "_IfNotAnyOrNever",
+    "_IfNotAny",
+    "_IfNotAnyOrNeverOrUnknown",
+    "_IfUnion",
+    "_ArrayFlat",
+    "_ArrayTakeNegative",
+    "_ArrayTakePositive",
+    "_ArraySkipNegative",
+    "_ArraySkipPositive",
+    "_ArrayRequired",
+    "_ArrayPartial",
+    "_ArrayRequiredIndexes",
+    "_ArrayOptionalIndexes",
+    "_ArrayRequiredElements",
+    "_ArrayOptionalElements",
+    "_ArrayOmitRequired",
+    "_ArrayOmitOptional",
+    "_ArrayToObject",
+    "_ArrayAssign",
+    "_ArrayOverwrite",
+    "_ArrayMerge",
+    "_ArrayUnionize",
+    "_Decrement",
+    "_Increment",
+    "_ObjectRequired",
+    "_ObjectPartial",
+    "_Lookup",
+    "_ObjectToTuple",
+    "_ObjectAssignPreCheck",
+    "_ObjectAssignPrimitive",
+    "_ObjectAssignArray",
+    "_ObjectAssignObject",
+    "_ObjectOverwrite",
+    "_UnionToTuple",
+    "_LookupType",
+    "_ObjectUnionizeDeep"
+  ],
+
+  // output > doc format
+  "indexFormat": "htmlTable",
+  "enumMembersFormat": "htmlTable",
+  "parametersFormat": "htmlTable",
+  "interfacePropertiesFormat": "htmlTable",
+  "classPropertiesFormat": "htmlTable",
+  "propertyMembersFormat": "htmlTable",
+  "typeDeclarationFormat": "htmlTable",
+
+  // output > table format
+  "tableColumnSettings": {
+    "hideDefaults": false,
+    "hideInherited": false,
+    "hideModifiers": false,
+    "hideOverrides": false,
+    "hideSources": false,
+    "hideValues": false,
+    "leftAlignHeaders": false
+  },
+
+  // output > sorter
+  "sort": ["kind", "source-order"],
+
+  // validation
+  "validation": {
+    "notDocumented": true,
+    "notExported": true,
+    "invalidPath": true,
+    "rewrittenLink": true,
+    "invalidLink": true,
+    "unusedMergeModuleWith": true
+  },
+  "treatValidationWarningsAsErrors": true,
+
+  // resolution
+  "disableGit": true,
+  "disableSources": true
+}
